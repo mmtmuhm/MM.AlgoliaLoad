@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="taxonomy_dbModel.Store" Provider="Devart.Data.MySql" ProviderManifestToken="MySQL, 8.0.16" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Catalog1.taxonomy_db.v_activeimpactareas' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="v_activeimpactareas">
+          <Key>
+            <PropertyRef Name="impactareaid" />
+          </Key>
+          <Property Name="impactareaid" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="250" />
+          <Property Name="code" Type="varchar" MaxLength="50" />
+          <Property Name="isactive" Type="sbyte" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Catalog1.taxonomy_db.v_activeoutcomes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="v_activeoutcomes">
+          <Key>
+            <PropertyRef Name="outcomeid" />
+            <PropertyRef Name="genomename" />
+          </Key>
+          <Property Name="outcomeid" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="250" />
+          <Property Name="description" Type="text" />
+          <Property Name="definition" Type="text" />
+          <Property Name="impactareaid" Type="int" />
+          <Property Name="genomeid" Type="int" />
+          <Property Name="universaloutcomeid" Type="varchar" MaxLength="50" />
+          <Property Name="symbol" Type="varchar" MaxLength="10" />
+          <Property Name="impactlanguage" Type="varchar" MaxLength="500" />
+          <Property Name="isuniversal" Type="sbyte" />
+          <Property Name="isactive" Type="sbyte" />
+          <Property Name="genomename" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="impactarea" Type="varchar" MaxLength="250" />
+          <Property Name="beneficiarytypename" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Catalog1.taxonomy_db.v_genes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="v_genes">
+          <Key>
+            <PropertyRef Name="geneid" />
+            <PropertyRef Name="chromosomeid" />
+            <PropertyRef Name="genomeid" />
+            <PropertyRef Name="genome" />
+            <PropertyRef Name="impactareaid" />
+          </Key>
+          <Property Name="geneid" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="500" />
+          <Property Name="description" Type="text" />
+          <Property Name="chromosomeid" Type="int" Nullable="false" />
+          <Property Name="chromosomename" Type="varchar" MaxLength="250" />
+          <Property Name="chromosomecode" Type="varchar" MaxLength="97" />
+          <Property Name="genomeid" Type="int" Nullable="false" />
+          <Property Name="genome" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="impactareaid" Type="int" Nullable="false" />
+          <Property Name="impactarea" Type="varchar" MaxLength="250" />
+          <Property Name="genecode" Type="varchar" MaxLength="148" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Catalog1.taxonomy_db.v_latestbenchmarks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="v_latestbenchmarks">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="universalOutcomeId" Type="varchar" MaxLength="100" />
+          <Property Name="min_cpo" Type="int" />
+          <Property Name="avg_cpo" Type="int" />
+          <Property Name="max_cpo" Type="int" />
+          <Property Name="inserted" Type="timestamp" Precision="0" />
+          <Property Name="avg_efficacy" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="num_programs_for_benchmark" Type="int" />
+          <Property Name="num_anecdotal" Type="int" />
+          <Property Name="num_output" Type="int" />
+          <Property Name="num_pit" Type="int" />
+          <Property Name="num_rct" Type="int" />
+          <Property Name="num_pre_post" Type="int" />
+          <Property Name="min_efficacy" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="max_efficacy" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="month" Type="tinyint" />
+          <Property Name="year" Type="bigint" />
+        </EntityType>
+        <EntityContainer Name="taxonomy_dbModelStoreContainer">
+          <EntitySet Name="v_activeimpactareas" EntityType="Self.v_activeimpactareas" store:Type="Views" store:Schema="taxonomy_db">
+            <DefiningQuery>SELECT 
+v_activeimpactareas.impactareaid,
+v_activeimpactareas.name,
+v_activeimpactareas.code,
+v_activeimpactareas.isactive
+FROM taxonomy_db.v_activeimpactareas AS v_activeimpactareas</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_activeoutcomes" EntityType="Self.v_activeoutcomes" store:Type="Views" store:Schema="taxonomy_db">
+            <DefiningQuery>SELECT 
+v_activeoutcomes.outcomeid,
+v_activeoutcomes.name,
+v_activeoutcomes.description,
+v_activeoutcomes.definition,
+v_activeoutcomes.impactareaid,
+v_activeoutcomes.genomeid,
+v_activeoutcomes.universaloutcomeid,
+v_activeoutcomes.symbol,
+v_activeoutcomes.impactlanguage,
+v_activeoutcomes.isuniversal,
+v_activeoutcomes.isactive,
+v_activeoutcomes.genomename,
+v_activeoutcomes.impactarea,
+v_activeoutcomes.beneficiarytypename
+FROM taxonomy_db.v_activeoutcomes AS v_activeoutcomes</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_genes" EntityType="Self.v_genes" store:Type="Views" store:Schema="taxonomy_db">
+            <DefiningQuery>SELECT 
+v_genes.geneid,
+v_genes.name,
+v_genes.description,
+v_genes.chromosomeid,
+v_genes.chromosomename,
+v_genes.chromosomecode,
+v_genes.genomeid,
+v_genes.genome,
+v_genes.impactareaid,
+v_genes.impactarea,
+v_genes.genecode
+FROM taxonomy_db.v_genes AS v_genes</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_latestbenchmarks" EntityType="Self.v_latestbenchmarks" store:Type="Views" store:Schema="taxonomy_db">
+            <DefiningQuery>SELECT 
+v_latestbenchmarks.id,
+v_latestbenchmarks.universalOutcomeId,
+v_latestbenchmarks.min_cpo,
+v_latestbenchmarks.avg_cpo,
+v_latestbenchmarks.max_cpo,
+v_latestbenchmarks.inserted,
+v_latestbenchmarks.avg_efficacy,
+v_latestbenchmarks.num_programs_for_benchmark,
+v_latestbenchmarks.num_anecdotal,
+v_latestbenchmarks.num_output,
+v_latestbenchmarks.num_pit,
+v_latestbenchmarks.num_rct,
+v_latestbenchmarks.num_pre_post,
+v_latestbenchmarks.min_efficacy,
+v_latestbenchmarks.max_efficacy,
+v_latestbenchmarks.month,
+v_latestbenchmarks.`year`
+FROM taxonomy_db.v_latestbenchmarks AS v_latestbenchmarks</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="taxonomy_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="v_activeimpactareas">
+          <Key>
+            <PropertyRef Name="impactareaid" />
+          </Key>
+          <Property Name="impactareaid" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isactive" Type="SByte" />
+        </EntityType>
+        <EntityType Name="v_activeoutcomes">
+          <Key>
+            <PropertyRef Name="outcomeid" />
+            <PropertyRef Name="genomename" />
+          </Key>
+          <Property Name="outcomeid" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="definition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="impactareaid" Type="Int32" />
+          <Property Name="genomeid" Type="Int32" />
+          <Property Name="universaloutcomeid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="symbol" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="impactlanguage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="isuniversal" Type="SByte" />
+          <Property Name="isactive" Type="SByte" />
+          <Property Name="genomename" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="impactarea" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="beneficiarytypename" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="v_genes">
+          <Key>
+            <PropertyRef Name="geneid" />
+            <PropertyRef Name="chromosomeid" />
+            <PropertyRef Name="genomeid" />
+            <PropertyRef Name="genome" />
+            <PropertyRef Name="impactareaid" />
+          </Key>
+          <Property Name="geneid" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="chromosomeid" Type="Int32" Nullable="false" />
+          <Property Name="chromosomename" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="chromosomecode" Type="String" MaxLength="97" FixedLength="false" Unicode="true" />
+          <Property Name="genomeid" Type="Int32" Nullable="false" />
+          <Property Name="genome" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="impactareaid" Type="Int32" Nullable="false" />
+          <Property Name="impactarea" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="genecode" Type="String" MaxLength="148" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="taxonomy_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="v_activeimpactareas" EntityType="Self.v_activeimpactareas" />
+          <EntitySet Name="v_activeoutcomes" EntityType="Self.v_activeoutcomes" />
+          <EntitySet Name="v_genes" EntityType="Self.v_genes" />
+          <EntitySet Name="v_latestbenchmarks" EntityType="taxonomy_dbModel.v_latestbenchmarks" />
+        </EntityContainer>
+        <EntityType Name="v_latestbenchmarks">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="universalOutcomeId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="min_cpo" Type="Int32" />
+          <Property Name="avg_cpo" Type="Int32" />
+          <Property Name="max_cpo" Type="Int32" />
+          <Property Name="inserted" Type="DateTime" />
+          <Property Name="avg_efficacy" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="num_programs_for_benchmark" Type="Int32" />
+          <Property Name="num_anecdotal" Type="Int32" />
+          <Property Name="num_output" Type="Int32" />
+          <Property Name="num_pit" Type="Int32" />
+          <Property Name="num_rct" Type="Int32" />
+          <Property Name="num_pre_post" Type="Int32" />
+          <Property Name="min_efficacy" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="max_efficacy" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="month" Type="Byte" />
+          <Property Name="year" Type="Int64" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="taxonomy_dbModelStoreContainer" CdmEntityContainer="taxonomy_dbEntities">
+          <EntitySetMapping Name="v_activeimpactareas">
+            <EntityTypeMapping TypeName="taxonomy_dbModel.v_activeimpactareas">
+              <MappingFragment StoreEntitySet="v_activeimpactareas">
+                <ScalarProperty Name="impactareaid" ColumnName="impactareaid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_activeoutcomes">
+            <EntityTypeMapping TypeName="taxonomy_dbModel.v_activeoutcomes">
+              <MappingFragment StoreEntitySet="v_activeoutcomes">
+                <ScalarProperty Name="outcomeid" ColumnName="outcomeid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="impactareaid" ColumnName="impactareaid" />
+                <ScalarProperty Name="genomeid" ColumnName="genomeid" />
+                <ScalarProperty Name="universaloutcomeid" ColumnName="universaloutcomeid" />
+                <ScalarProperty Name="symbol" ColumnName="symbol" />
+                <ScalarProperty Name="impactlanguage" ColumnName="impactlanguage" />
+                <ScalarProperty Name="isuniversal" ColumnName="isuniversal" />
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="genomename" ColumnName="genomename" />
+                <ScalarProperty Name="impactarea" ColumnName="impactarea" />
+                <ScalarProperty Name="beneficiarytypename" ColumnName="beneficiarytypename" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_genes">
+            <EntityTypeMapping TypeName="taxonomy_dbModel.v_genes">
+              <MappingFragment StoreEntitySet="v_genes">
+                <ScalarProperty Name="geneid" ColumnName="geneid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="chromosomeid" ColumnName="chromosomeid" />
+                <ScalarProperty Name="chromosomename" ColumnName="chromosomename" />
+                <ScalarProperty Name="chromosomecode" ColumnName="chromosomecode" />
+                <ScalarProperty Name="genomeid" ColumnName="genomeid" />
+                <ScalarProperty Name="genome" ColumnName="genome" />
+                <ScalarProperty Name="impactareaid" ColumnName="impactareaid" />
+                <ScalarProperty Name="impactarea" ColumnName="impactarea" />
+                <ScalarProperty Name="genecode" ColumnName="genecode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_latestbenchmarks">
+            <EntityTypeMapping TypeName="taxonomy_dbModel.v_latestbenchmarks">
+              <MappingFragment StoreEntitySet="v_latestbenchmarks">
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="month" ColumnName="month" />
+                <ScalarProperty Name="max_efficacy" ColumnName="max_efficacy" />
+                <ScalarProperty Name="min_efficacy" ColumnName="min_efficacy" />
+                <ScalarProperty Name="num_pre_post" ColumnName="num_pre_post" />
+                <ScalarProperty Name="num_rct" ColumnName="num_rct" />
+                <ScalarProperty Name="num_pit" ColumnName="num_pit" />
+                <ScalarProperty Name="num_output" ColumnName="num_output" />
+                <ScalarProperty Name="num_anecdotal" ColumnName="num_anecdotal" />
+                <ScalarProperty Name="num_programs_for_benchmark" ColumnName="num_programs_for_benchmark" />
+                <ScalarProperty Name="avg_efficacy" ColumnName="avg_efficacy" />
+                <ScalarProperty Name="inserted" ColumnName="inserted" />
+                <ScalarProperty Name="max_cpo" ColumnName="max_cpo" />
+                <ScalarProperty Name="avg_cpo" ColumnName="avg_cpo" />
+                <ScalarProperty Name="min_cpo" ColumnName="min_cpo" />
+                <ScalarProperty Name="universalOutcomeId" ColumnName="universalOutcomeId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

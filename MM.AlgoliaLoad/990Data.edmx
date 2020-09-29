@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mmxModel.Store" Provider="Devart.Data.MySql" ProviderManifestToken="MySQL, 8.0.16" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="mmx_map_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="object_id" Type="varchar" MaxLength="31" Nullable="false" />
+          <Property Name="ein" Type="varchar" MaxLength="15" />
+          <Property Name="OrgName" Type="varchar" MaxLength="75" />
+          <Property Name="ProgramName" Type="longtext" />
+          <Property Name="ProgramDescription" Type="longtext" />
+          <Property Name="Adjusted" Type="bigint" />
+          <Property Name="Outcomes" Type="bigint" Nullable="false" />
+          <Property Name="CPO" Type="bigint" Nullable="false" />
+          <Property Name="Description" Type="longtext" Nullable="false" />
+          <Property Name="Budget" Type="bigint" />
+          <Property Name="Address" Type="varchar" MaxLength="500" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+          <Property Name="State" Type="varchar" MaxLength="255" />
+          <Property Name="Zip_Code" Type="varchar" MaxLength="255" />
+          <Property Name="lat" Type="varchar" MaxLength="255" />
+          <Property Name="lon" Type="varchar" MaxLength="255" />
+          <Property Name="UniversalOutcomeId" Type="varchar" MaxLength="255" />
+          <Property Name="OutcomeId" Type="int" />
+          <Property Name="OutcomeName" Type="varchar" MaxLength="255" />
+          <Property Name="ImpactArea" Type="varchar" MaxLength="255" />
+          <Property Name="Genome" Type="varchar" MaxLength="255" />
+          <Property Name="OutcomeDescription" Type="text" />
+          <Property Name="AverageAcheived" Type="bigint" />
+          <Property Name="MinAcheived" Type="bigint" />
+          <Property Name="MaxAcheived" Type="bigint" />
+          <Property Name="AverageCPO" Type="bigint" />
+          <Property Name="MinCPO" Type="bigint" />
+          <Property Name="MaxCPO" Type="bigint" />
+          <Property Name="AlgoliaObjectId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ntee_outcomes_lookup">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EIN" Type="int" />
+          <Property Name="CITY" Type="text" />
+          <Property Name="EXPS" Type="text" />
+          <Property Name="NAME" Type="text" />
+          <Property Name="NTEE1" Type="text" />
+          <Property Name="NTEECC_Cleaned" Type="text" />
+          <Property Name="NTMAJ10" Type="text" />
+          <Property Name="NTMAJ12" Type="text" />
+          <Property Name="STATE" Type="text" />
+          <Property Name="ZIP" Type="text" />
+          <Property Name="outcomeid" Type="int" />
+        </EntityType>
+        <EntityContainer Name="mmxModelStoreContainer">
+          <EntitySet Name="mmx_map_data" EntityType="Self.mmx_map_data" Schema="mmx" store:Type="Tables" />
+          <EntitySet Name="ntee_outcomes_lookup" EntityType="Self.ntee_outcomes_lookup" Schema="mmx" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mmxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ntee_outcomes_lookup">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EIN" Type="Int32" />
+          <Property Name="CITY" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EXPS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NTEE1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NTEECC_Cleaned" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NTMAJ10" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NTMAJ12" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="outcomeid" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="mmxEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ntee_outcomes_lookup" EntityType="Self.ntee_outcomes_lookup" />
+          <EntitySet Name="mmx_map_data" EntityType="mmxModel.mmx_map_data" />
+        </EntityContainer>
+        <EntityType Name="mmx_map_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="object_id" Type="String" Nullable="false" MaxLength="31" FixedLength="false" Unicode="true" />
+          <Property Name="ein" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="OrgName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+          <Property Name="ProgramName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProgramDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Adjusted" Type="Int64" />
+          <Property Name="Outcomes" Type="Int64" Nullable="false" />
+          <Property Name="CPO" Type="Int64" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Budget" Type="Int64" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Zip_Code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UniversalOutcomeId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OutcomeId" Type="Int32" />
+          <Property Name="OutcomeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ImpactArea" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Genome" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OutcomeDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AverageAcheived" Type="Int64" />
+          <Property Name="MinAcheived" Type="Int64" />
+          <Property Name="MaxAcheived" Type="Int64" />
+          <Property Name="AverageCPO" Type="Int64" />
+          <Property Name="MinCPO" Type="Int64" />
+          <Property Name="MaxCPO" Type="Int64" />
+          <Property Name="AlgoliaObjectId" Type="Int64" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mmxModelStoreContainer" CdmEntityContainer="mmxEntities">
+          <EntitySetMapping Name="ntee_outcomes_lookup">
+            <EntityTypeMapping TypeName="mmxModel.ntee_outcomes_lookup">
+              <MappingFragment StoreEntitySet="ntee_outcomes_lookup">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="EIN" ColumnName="EIN" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="EXPS" ColumnName="EXPS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="NTEE1" ColumnName="NTEE1" />
+                <ScalarProperty Name="NTEECC_Cleaned" ColumnName="NTEECC_Cleaned" />
+                <ScalarProperty Name="NTMAJ10" ColumnName="NTMAJ10" />
+                <ScalarProperty Name="NTMAJ12" ColumnName="NTMAJ12" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="outcomeid" ColumnName="outcomeid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mmx_map_data">
+            <EntityTypeMapping TypeName="mmxModel.mmx_map_data">
+              <MappingFragment StoreEntitySet="mmx_map_data">
+                <ScalarProperty Name="AlgoliaObjectId" ColumnName="AlgoliaObjectId" />
+                <ScalarProperty Name="MaxCPO" ColumnName="MaxCPO" />
+                <ScalarProperty Name="MinCPO" ColumnName="MinCPO" />
+                <ScalarProperty Name="AverageCPO" ColumnName="AverageCPO" />
+                <ScalarProperty Name="MaxAcheived" ColumnName="MaxAcheived" />
+                <ScalarProperty Name="MinAcheived" ColumnName="MinAcheived" />
+                <ScalarProperty Name="AverageAcheived" ColumnName="AverageAcheived" />
+                <ScalarProperty Name="OutcomeDescription" ColumnName="OutcomeDescription" />
+                <ScalarProperty Name="Genome" ColumnName="Genome" />
+                <ScalarProperty Name="ImpactArea" ColumnName="ImpactArea" />
+                <ScalarProperty Name="OutcomeName" ColumnName="OutcomeName" />
+                <ScalarProperty Name="OutcomeId" ColumnName="OutcomeId" />
+                <ScalarProperty Name="UniversalOutcomeId" ColumnName="UniversalOutcomeId" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CPO" ColumnName="CPO" />
+                <ScalarProperty Name="Outcomes" ColumnName="Outcomes" />
+                <ScalarProperty Name="Adjusted" ColumnName="Adjusted" />
+                <ScalarProperty Name="ProgramDescription" ColumnName="ProgramDescription" />
+                <ScalarProperty Name="ProgramName" ColumnName="ProgramName" />
+                <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+                <ScalarProperty Name="ein" ColumnName="ein" />
+                <ScalarProperty Name="object_id" ColumnName="object_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
