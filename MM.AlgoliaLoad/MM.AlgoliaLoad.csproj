@@ -71,15 +71,273 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>990Data.edmx</DependentUpon>
     </Compile>
+    <Compile Include="app_settings.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chromosome.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chromosome_studyenvironments_globals.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chromosome_studyparticipants_globals.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chromosome_types.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_activities_ugs.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_activities_ugs_modifiers.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_attributecategory.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_backups.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_beneficiary_decoded.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_ben_study_genes.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_context_decoded.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_ctx_study_genes.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_gdataid_outcomeid.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_groups.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_groups_items.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_list_ordering.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_messages.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_ns_stem_bendef.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_ns_stem_outcomes.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_peinterrelationship_groups.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_peinterrelationship_groups_items.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_programs.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_activities.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_characteristics.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_comments.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_contexts.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_curriculum.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_effects.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_logistics.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_program_methods_and_dvs.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_status.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_status_groups.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="coding_tags.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="effectsimport.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="exportrequest.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fileattachment.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="gene.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="geneomedata_relationships.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="geneome_chromosomes.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genome.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_extended_users.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_import_history.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_stem.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="genomedata_v.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenomeManagerData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenomeManagerData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenomeManagerData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenomeManagerData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenomeManagerData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="genome_groups.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="helpcontent.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="helpcontent_tracking.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="imprint.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="imprint_task_order.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="k12genesload.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_coding_sheet_tracker.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_organization.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_outcome_list.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_universalgene_categories.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_universalgene_modifiers.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="master_universalgene_types.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_dashboard_searchhistory.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_02.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_02_summary.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_top3_02_summary.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mf_genomedataset_top5_02.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
     <Compile Include="mmx_map_data.cs">
       <DependentUpon>990Data.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SearchItem.cs" />
+    <Compile Include="Models\AcivityGeneSearchItem.cs" />
+    <Compile Include="Models\ArticleSearchItem.cs" />
+    <Compile Include="Models\OutcomesSeaerchItem.cs" />
+    <Compile Include="Models\ProgramSearchItem.cs" />
+    <Compile Include="next_in_queue_excludes.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notesketch.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notesketch_stem.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notesketch_v.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
     <Compile Include="ntee_outcomes_lookup.cs">
       <DependentUpon>990Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="number.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="overall_study_effectiveness.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="powerbi_links.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rating.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="session.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="study.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="study_gene_ordering.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_genomes.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_genome_groups.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_organization.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_organization_prep.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subscribe_outcome_list.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
     <Compile Include="TaxonomyData.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +353,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TaxonomyData.edmx</DependentUpon>
     </Compile>
+    <Compile Include="tracking.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usergroup.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="users_onefinalreport.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_permissions.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_pinned.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_registration_codes.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_roles.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_settings.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_tasks.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utility_missingfile_report.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
     <Compile Include="v_activeimpactareas.cs">
       <DependentUpon>TaxonomyData.tt</DependentUpon>
     </Compile>
@@ -107,6 +398,24 @@
     <Compile Include="v_latestbenchmarks.cs">
       <DependentUpon>TaxonomyData.tt</DependentUpon>
     </Compile>
+    <Compile Include="wwceffect.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wwceffects_v2.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wwc_additionalfields.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wwc_import_v2.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wwc_measured.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wwc_period.cs">
+      <DependentUpon>GenomeManagerData.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="990Data.edmx">
@@ -117,6 +426,13 @@
       <DependentUpon>990Data.edmx</DependentUpon>
     </None>
     <None Include="App.config" />
+    <EntityDeploy Include="GenomeManagerData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GenomeManagerData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GenomeManagerData.edmx.diagram">
+      <DependentUpon>GenomeManagerData.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <EntityDeploy Include="TaxonomyData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -136,6 +452,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>990Data.edmx</DependentUpon>
       <LastGenOutput>990Data.cs</LastGenOutput>
+    </Content>
+    <Content Include="GenomeManagerData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GenomeManagerData.edmx</DependentUpon>
+      <LastGenOutput>GenomeManagerData.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GenomeManagerData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GenomeManagerData.edmx</DependentUpon>
+      <LastGenOutput>GenomeManagerData.cs</LastGenOutput>
     </Content>
     <Content Include="TaxonomyData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

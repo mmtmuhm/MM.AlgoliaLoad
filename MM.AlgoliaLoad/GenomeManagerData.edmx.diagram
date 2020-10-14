@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f9dc07e921d4c1492b407c9b6da1d85" Name="Diagram1">
+        <EntityTypeShape EntityType="genomemanager_v2Model.app_settings" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.chromosome_studyenvironments_globals" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.chromosome_studyparticipants_globals" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.chromosome_types" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.chromosome" Width="1.5" PointX="8" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_activities_ugs" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_activities_ugs_modifiers" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_attributecategory" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_backups" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_ben_study_genes" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_beneficiary_decoded" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_context_decoded" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_ctx_study_genes" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_gdataid_outcomeid" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_groups" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_groups_items" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_messages" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_ns_stem_bendef" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_ns_stem_outcomes" Width="1.5" PointX="12.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_peinterrelationship_groups" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_peinterrelationship_groups_items" Width="1.5" PointX="16.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_activities" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_characteristics" Width="1.5" PointX="14.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_comments" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_contexts" Width="1.5" PointX="17.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_curriculum" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_effects" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_logistics" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_program_methods_and_dvs" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_programs" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_status" Width="1.5" PointX="19.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_status_groups" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_tags" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.effectsimport" Width="1.5" PointX="2.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.exportrequest" Width="1.5" PointX="21.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.fileattachment" Width="1.5" PointX="18.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.geneome_chromosomes" Width="1.5" PointX="10.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.geneomedata_relationships" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.gene" Width="1.5" PointX="10.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.genome_groups" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.genomedata" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.genomedata_extended_users" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.genomedata_import_history" Width="1.5" PointX="22.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.genomedata_stem" Width="1.5" PointX="22.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.genomedata_v" Width="1.5" PointX="22.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.genome" Width="1.5" PointX="8" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.helpcontent" Width="1.5" PointX="23.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.helpcontent_tracking" Width="1.5" PointX="8.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.imprint" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.imprint_task_order" Width="1.5" PointX="2.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.k12genesload" Width="1.5" PointX="24.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.master_coding_sheet_tracker" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.master_organization" Width="1.5" PointX="24.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.master_outcome_list" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.master_universalgene_categories" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.master_universalgene_modifiers" Width="1.5" PointX="24.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.master_universalgene_types" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.mf_dashboard_searchhistory" Width="1.5" PointX="24.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.mf_genomedataset_02" Width="1.5" PointX="24.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.mf_genomedataset_02_summary" Width="1.5" PointX="16.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.mf_genomedataset_top3_02_summary" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.mf_genomedataset_top5_02" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.next_in_queue_excludes" Width="1.5" PointX="25.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.notesketch" Width="1.5" PointX="26.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.notesketch_stem" Width="1.5" PointX="26.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.notesketch_v" Width="1.5" PointX="26.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.number" Width="1.5" PointX="4.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.overall_study_effectiveness" Width="1.5" PointX="27.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.powerbi_links" Width="1.5" PointX="13" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.rating" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.session" Width="1.5" PointX="8.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.study" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.study_gene_ordering" Width="1.5" PointX="20.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.subscribe_genome_groups" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.subscribe_genomes" Width="1.5" PointX="28.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.subscribe_organization" Width="1.5" PointX="28.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.subscribe_organization_prep" Width="1.5" PointX="10.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.subscribe_outcome_list" Width="1.5" PointX="12.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.tracking" Width="1.5" PointX="28.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.user_permissions" Width="1.5" PointX="28.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.user_pinned" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.user_registration_codes" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.user_roles" Width="1.5" PointX="2.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.user_settings" Width="1.5" PointX="29.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.user_tasks" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.usergroup" Width="1.5" PointX="30.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.user" Width="1.5" PointX="10.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.users_onefinalreport" Width="1.5" PointX="30.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.utility_missingfile_report" Width="1.5" PointX="18.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.wwc_additionalfields" Width="1.5" PointX="30.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.wwc_import_v2" Width="1.5" PointX="20.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.wwc_measured" Width="1.5" PointX="30.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.wwc_period" Width="1.5" PointX="30.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.wwceffect" Width="1.5" PointX="4.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.wwceffects_v2" Width="1.5" PointX="6.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="genomemanager_v2Model.coding_list_ordering" Width="1.5" PointX="26.75" PointY="31.75" IsExpanded="true" />
+        <AssociationConnector Association="genomemanager_v2Model.chromosomes_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="genomemanager_v2Model.geneome_chromosomes_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="genomemanager_v2Model.genes_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="genomemanager_v2Model.geneome_chromosomes_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="genomemanager_v2Model.genomedata_child_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="genomemanager_v2Model.genomedata_parent_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="genomemanager_v2Model.studies_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="genomemanager_v2Model.FK_CREATEDBY_USERID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

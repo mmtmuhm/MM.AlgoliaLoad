@@ -7,10 +7,11 @@ using Newtonsoft.Json.Linq;
 
 namespace MM.AlgoliaLoad.Models
 {
-    public class SearchItem
+    public class ProgramSearchItem
     {
         public int Id { get; set; }
         public int ObjectId { get; set; }
+        public string OrganizationName { get; set; }
         public string ProgramName { get; set; }
         public string ProgramDescription { get; set; }
         public int Budget { get; set; }
@@ -31,7 +32,7 @@ namespace MM.AlgoliaLoad.Models
         public int MinCPO { get; set; }
         public int MaxCPO { get; set; }
         public int AlgoliaObjectId { get; set; }
-
+        public string EIN { get; set; }
         public string V1_10 { get; set; }
         public string V1_11 { get; set; }
         public string V1_12 { get; set; }
@@ -41,18 +42,18 @@ namespace MM.AlgoliaLoad.Models
         public JObject AlgoliaItem { get; set; }
 
 
-        public SearchItem() 
+        public ProgramSearchItem() 
         {
             
         
         }
 
-        public SearchItem(mmx_map_data data)
+        public ProgramSearchItem(mmx_map_data data)
         {
             if (data.ImpactArea != null)
             {
                 V1_10 = string.Format("{0}", data.ImpactArea);
-                V1_11 = string.Format("{0} > {1}", data.ImpactArea, data.ImpactArea);
+                V1_11 = string.Format("{0} > {1}", data.ImpactArea, data.Genome);
                 V1_12 = string.Format("{0} > {1} > {2}", data.ImpactArea, data.Genome, data.OutcomeName);
             }
 
@@ -64,6 +65,7 @@ namespace MM.AlgoliaLoad.Models
 
                 ["Id"] = data.id,
                 ["ObjectId"] = data.object_id,
+                ["OrganizationName"] = data.OrgName,
                 ["ProgramName"] = data.ProgramName,
                 ["ProgramDescription"] = data.ProgramDescription,
                 ["Budget"] = data.Budget,
@@ -83,6 +85,7 @@ namespace MM.AlgoliaLoad.Models
                 ["AverageCPO"] = data.AverageCPO,
                 ["MinCPO"] = data.MinCPO,
                 ["MaxCPO"] = data.MaxCPO,
+                ["EIN"] = data.ein,
                 ["V1_10"] = V1_10,
                 ["V1_11"] = V1_11,
                 ["V1_12"] = V1_12,
@@ -96,32 +99,3 @@ namespace MM.AlgoliaLoad.Models
 }
 
 
-
-//ein varchar(15) DEFAULT NULL,
-// OrgName varchar(75) DEFAULT NULL,
-// ProgramName longtext DEFAULT NULL,
-//  ProgramDescription longtext DEFAULT NULL,
-//  Adjusted bigint(20) DEFAULT NULL,
-//  Outcomes bigint(20) NOT NULL,
-//  CPO bigint(20) NOT NULL,
-//  Description longtext NOT NULL,
-//  Budget bigint(20) DEFAULT NULL,
-//  Address varchar(500) DEFAULT NULL,
-//  City varchar(255) DEFAULT NULL,
-//  State varchar(255) DEFAULT NULL,
-//  Zip_Code varchar(255) DEFAULT NULL,
-//  lat varchar(255) DEFAULT NULL,
-//  lon varchar(255) DEFAULT NULL,
-//  UniversalOutcomeId varchar(255) DEFAULT NULL,
-//  OutcomeId int (11) DEFAULT NULL,
-//   OutcomeName varchar(255) DEFAULT NULL,
-//   ImpactArea varchar(255) DEFAULT NULL,
-//   Genome varchar(255) DEFAULT NULL,
-//   OutcomeDescription text DEFAULT NULL,
-//  AverageAcheived bigint(20) DEFAULT NULL,
-//  MinAcheived bigint(20) DEFAULT NULL,
-//  MaxAcheived bigint(20) DEFAULT NULL,
-//  AverageCPO bigint(20) DEFAULT NULL,
-//  MinCPO bigint(20) DEFAULT NULL,
-//  MaxCPO bigint(20) DEFAULT NULL,
-//  AlgoliaObjectId bigint(20) DEFAULT NULL,
